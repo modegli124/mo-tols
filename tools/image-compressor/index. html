@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="اضغط الصور أونلاين مجانًا. قلل حجم JPG وPNG وWebP مع التحكم في الجودة والصيغة والأبعاد، مباشرة من المتصفح.">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <link rel="canonical" href="https://modegli124.github.io/mo-tols/tools/image-compressor/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ضغط الصور أونلاين مجانًا | MODEGLI Tools">
+    <meta property="og:description" content="تقليل حجم الصور JPG وPNG وWebP مع التحكم في الجودة والأبعاد من المتصفح.">
+    <meta property="og:url" content="https://modegli124.github.io/mo-tols/tools/image-compressor/">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../style.css">
+    <title>ضغط الصور أونلاين مجانًا | JPG PNG WebP — MODEGLI Tools</title>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MODEGLI Image Compressor","applicationCategory":"MultimediaApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://modegli124.github.io/mo-tols/tools/image-compressor/","inLanguage":"ar"}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"هل ضغط الصور يتم داخل المتصفح؟","acceptedAnswer":{"@type":"Answer","text":"نعم، المعالجة الأساسية في هذه الصفحة تتم داخل المتصفح."}},{"@type":"Question","name":"ما أفضل جودة لضغط الصورة؟","acceptedAnswer":{"@type":"Answer","text":"ابدأ عادةً بين 60% و80% ثم عاين النتيجة."}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://modegli124.github.io/mo-tols/"},{"@type":"ListItem","position":2,"name":"ضغط الصور أونلاين مجانًا","item":"https://modegli124.github.io/mo-tols/tools/image-compressor/"}]}</script>
+</head>
+<body>
+    <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+    <header class="header">
+        <a class="brand" href="../../"><span class="logo">M</span><span><b>MODEGLI</b><small>Tools</small></span></a>
+        <nav><a href="../../#tools">الأدوات</a><a href="../../about.html">عن الموقع</a><a href="../../privacy.html">الخصوصية</a></nav>
+    </header>
+    <main id="main" class="tool-page">
+        <div class="breadcrumb"><a href="../../">الرئيسية</a> ← ضغط الصور</div>
+        <div class="tool-topbar">
+            <a class="btn secondary" href="../../">← الرئيسية</a>
+            <div class="tool-nav">
+                <a href="../image-resizer/">تغيير الحجم</a>
+                <a href="../word-counter/">عداد الكلمات</a>
+                <a href="../unit-converter/">الوحدات</a>
+                <a href="../calculator/">الحاسبة</a>
+                <a href="../qr-generator/">QR</a>
+            </div>
+        </div>
+        <div class="tool-shell">
+            <section class="tool-hero">
+                <p class="eyebrow">IMAGE COMPRESSOR</p>
+                <h1>ضغط الصور أونلاين مجانًا</h1>
+                <p>قلل حجم JPG وPNG وWebP لتسهيل رفعها ومشاركتها. اختر الجودة والصيغة والحجم الأقصى ثم حمّل النسخة الجديدة.</p>
+            </section>
+            <section class="tool-card">
+                <label class="dropzone" id="dropzone" for="imageFile">
+                    <strong>📷 اسحب الصورة هنا</strong>
+                    <span>أو اضغط لاختيار JPG أو PNG أو WebP</span>
+                    <input class="hidden-input" id="imageFile" type="file" accept="image/jpeg,image/png,image/webp,image/*">
+                </label>
+                <div class="form-row">
+                    <div>
+                        <label for="quality">الجودة: <b id="qualityValue">75%</b></label>
+                        <div class="range-row">
+                            <input id="quality" type="range" min="10" max="100" value="75">
+                            <span id="qualityValue2">75%</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="format"><b>صيغة الإخراج</b></label>
+                        <select id="format">
+                            <option value="image/webp">WebP</option>
+                            <option value="image/jpeg">JPG</option>
+                            <option value="image/png">PNG</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div>
+                        <label for="maxSize">أقصى بُعد بالبكسل</label>
+                        <input id="maxSize" type="number" min="100" max="10000" placeholder="مثال: 2000">
+                    </div>
+                    <div>
+                        <label for="fileName">اسم الملف</label>
+                        <input id="fileName" type="text" placeholder="modegli-compressed">
+                    </div>
+                </div>
+                <button class="btn" id="compressBtn">ضغط الصورة الآن</button>
+                <div id="message" class="result" hidden></div>
+                <div id="stats" class="stats" hidden>
+                    <div class="stat"><b id="before">—</b><span>الحجم الأصلي</span></div>
+                    <div class="stat"><b id="after">—</b><span>بعد الضغط</span></div>
+                    <div class="stat"><b id="saved">—</b><span>التوفير</span></div>
+                </div>
+                <div id="preview" class="preview"></div>
+                <div id="actions" class="actions"></div>
+            </section>
+            <div class="ad-space" hidden aria-label="مساحة إعلانية">مساحة إعلانية</div>
+            <section class="info-section">
+                <h2>كيف تضغط الصور بدون فقد كبير في الجودة؟</h2>
+                <p>ابدأ بجودة متوسطة ثم افحص المعاينة. تقليل الأبعاد قد يخفض حجم الملف أكثر من خفض الجودة وحده.</p>
+                <div class="kicker-list">
+                    <div>⚡ المعالجة داخل المتصفح</div>
+                    <div>📦 JPG وPNG وWebP</div>
+                    <div>📐 تصغير الأبعاد</div>
+                    <div>🔒 بدون حساب</div>
+                </div>
+                <h2>أسئلة شائعة</h2>
+                <details><summary>هل يتم رفع الصورة إلى MODEGLI؟</summary><p>لا، المعالجة الأساسية تتم داخل المتصفح.</p></details>
+                <details><summary>ما أفضل صيغة؟</summary><p>WebP عملي للويب، JPG مناسب للصور الفوتوغرافية، وPNG مفيد عند الحاجة للشفافية.</p></details>
+            </section>
+            <section class="info-section">
+                <h2>أدوات مرتبطة</h2>
+                <div class="related-tools">
+                    <a href="../image-resizer/"><b>تغيير حجم الصور</b><span>تعديل العرض والارتفاع</span></a>
+                    <a href="../qr-generator/"><b>إنشاء QR Code</b><span>رابط أو نص إلى QR</span></a>
+                    <a href="../../#tools"><b>كل الأدوات</b><span>تصفح MODEGLI</span></a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="brand"><span class="logo">M</span><span><b>MODEGLI</b><small>Tools</small></span></div>
+        <div class="footer-links"><a href="../../privacy.html">الخصوصية</a><a href="../../terms.html">الشروط</a><a href="../../contact.html">تواصل معنا</a></div>
+    </footer>
+    <script>
+        const fi = document.getElementById('imageFile'), dz = document.getElementById('dropzone'), q = document.getElementById('quality'), qv = document.getElementById('qualityValue'), qv2 = document.getElementById('qualityValue2'), fmt = document.getElementById('format'), mx = document.getElementById('maxSize'), fn = document.getElementById('fileName'), btn = document.getElementById('compressBtn'), msg = document.getElementById('message'), stats = document.getElementById('stats'), preview = document.getElementById('preview'), actions = document.getElementById('actions');
+        q.oninput = () => { qv.textContent = q.value + '%'; qv2.textContent = q.value + '%'; };
+        fi.onchange = () => { const f = fi.files[0]; if (f && !fn.value) fn.value = f.name.replace(/\.[^.]+$/, '') + '-compressed'; };
+        ['dragenter', 'dragover'].forEach(e => dz.addEventListener(e, x => { x.preventDefault(); dz.classList.add('dragover'); }));
+        ['dragleave', 'drop'].forEach(e => dz.addEventListener(e, x => { x.preventDefault(); dz.classList.remove('dragover'); }));
+        dz.addEventListener('drop', e => { const f = e.dataTransfer.files[0]; if (f && f.type.startsWith('image/')) { const dt = new DataTransfer(); dt.items.add(f); fi.files = dt.files; fi.dispatchEvent(new Event('change')); } });
+        function sz(b) { return b < 1024 ? b + ' B' : b < 1048576 ? (b / 1024).toFixed(1) + ' KB' : (b / 1048576).toFixed(2) + ' MB'; }
+        btn.onclick = () => {
+            const f = fi.files[0]; msg.hidden = false; actions.innerHTML = ''; stats.hidden = true; preview.innerHTML = '';
+            if (!f) { msg.textContent = 'اختر صورة أولًا.'; msg.className = 'result error'; return; }
+            if (f.size > 25 * 1024 * 1024) { msg.textContent = 'حجم الملف أكبر من 25MB.'; msg.className = 'result error'; return; }
+            const r = new FileReader();
+            r.onload = e => {
+                const i = new Image();
+                i.onload = () => {
+                    let w = i.naturalWidth, h = i.naturalHeight, m = parseInt(mx.value, 10);
+                    if (Number.isFinite(m) && m > 0 && Math.max(w, h) > m) {
+                        const sc = m / Math.max(w, h); w = Math.round(w * sc); h = Math.round(h * sc);
+                    }
+                    const c = document.createElement('canvas'); c.width = w; c.height = h;
+                    c.getContext('2d').drawImage(i, 0, 0, w, h);
+                    const t = fmt.value;
+                    c.toBlob(b => {
+                        if (!b) { msg.textContent = 'تعذر إنشاء الصورة.'; msg.className = 'result error'; return; }
+                        const u = URL.createObjectURL(b), ext = t === 'image/png' ? 'png' : t === 'image/jpeg' ? 'jpg' : 'webp', save = Math.max(0, (f.size - b.size) / f.size * 100);
+                        document.getElementById('before').textContent = sz(f.size);
+                        document.getElementById('after').textContent = sz(b.size);
+                        document.getElementById('saved').textContent = save.toFixed(1) + '%';
+                        stats.hidden = false; msg.textContent = 'تم ضغط الصورة بنجاح.'; msg.className = 'result success';
+                        const im = document.createElement('img'); im.src = u; im.alt = 'معاينة الصورة بعد الضغط'; preview.appendChild(im);
+                        const a = document.createElement('a'); a.href = u; a.download = (fn.value.trim() || 'modegli-compressed') + '.' + ext; a.className = 'btn'; a.textContent = 'تحميل الصورة'; actions.appendChild(a);
+                    }, t, Number(q.value) / 100);
+                };
+                i.src = e.target.result;
+            };
+            r.readAsDataURL(f);
+        };
+    </script>
+</body>
+</html>
