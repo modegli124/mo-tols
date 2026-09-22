@@ -3,39 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a0d0d">
-  <meta name="description" content="MODEGLI Tools - أدوات مجانية وسريعة تعمل مباشرة من المتصفح">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <title>MODEGLI Tools</title>
-</head>
-<body>
+  <meta name="theme-color" content="#07100d">
+  <meta name="description" content="MODEGLI Tools — أدوات مجانية وسريعة للصور والنصوص والحسابات والتحويلات تعمل مباشرة من المتصفح.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://modegli124.github.io/mo-tols/">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <title>MODEGLI Tools — أدوات مجانية وسريعة</title>
+<meta name="author" content="MODEGLI Tools">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MODEGLI Tools">
+<meta property="og:title" content="MODEGLI Tools — أدوات مجانية وسريعة">
+<meta property="og:description" content="أدوات مجانية وسريعة للصور والنصوص والحسابات والتحويلات تعمل مباشرة من المتصفح.">
+<meta property="og:url" content="https://modegli124.github.io/mo-tols/">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MODEGLI Tools — أدوات مجانية وسريعة">
+<meta name="twitter:description" content="أدوات مجانية وسريعة للصور والنصوص والحسابات والتحويلات.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"MODEGLI Tools","url":"https://modegli124.github.io/mo-tols/","inLanguage":"ar","description":"أدوات مجانية وسريعة للصور والنصوص والحسابات والتحويلات.","potentialAction":{"@type":"SearchAction","target":"https://modegli124.github.io/mo-tols/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"أدوات MODEGLI Tools","itemListElement":[{"@type":"ListItem","position":1,"name":"ضغط الصور","url":"https://modegli124.github.io/mo-tols/tools/image-compressor/"},{"@type":"ListItem","position":2,"name":"تغيير حجم الصور","url":"https://modegli124.github.io/mo-tols/tools/image-resizer/"},{"@type":"ListItem","position":3,"name":"إنشاء QR Code","url":"https://modegli124.github.io/mo-tols/tools/qr-generator/"},{"@type":"ListItem","position":4,"name":"عداد الكلمات","url":"https://modegli124.github.io/mo-tols/tools/word-counter/"},{"@type":"ListItem","position":5,"name":"تحويل الوحدات","url":"https://modegli124.github.io/mo-tols/tools/unit-converter/"},{"@type":"ListItem","position":6,"name":"الحاسبة","url":"https://modegli124.github.io/mo-tols/tools/calculator/"}]}</script></head>
+<body><a class="skip-link" href="#home">تخطي إلى المحتوى</a>
 <header class="header">
-  <a class="brand" href="#" aria-label="MODEGLI Tools">
+  <a class="brand" href="./" aria-label="MODEGLI Tools">
     <span class="logo">M</span><span><b>MODEGLI</b><small>Tools</small></span>
   </a>
-  <nav>
+  <nav id="main-nav">
     <a href="#home">الرئيسية</a>
     <a href="#tools">الأدوات</a>
-    <a href="#about">عن MODEGLI</a>
+    <a href="#about">عن الموقع</a>
+    <a href="./privacy.html">الخصوصية</a>
   </nav>
-  <button class="menu" aria-label="القائمة">☰</button>
+  <button class="menu" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false">☰</button>
 </header>
 
 <main>
 <section id="home" class="hero">
   <div class="hero-copy">
     <p class="eyebrow">MODEGLI TOOLS</p>
-    <h1>كل أدواتك المفيدة<br><span>في مكان واحد</span></h1>
-    <p>أدوات مجانية وسريعة تعمل مباشرة من المتصفح، بدون تسجيل.</p>
+    <h1>أدوات مفيدة<br><span>في مكان واحد</span></h1>
+    <p>أدوات مجانية وسريعة للصور والنصوص والحسابات والتحويلات، مع تنفيذ كثير من العمليات مباشرة داخل المتصفح.</p>
     <div class="search-wrap">
-      <span>⌕</span><input id="search" placeholder="ابحث عن أداة..." autocomplete="off">
+      <span aria-hidden="true">⌕</span>
+      <input id="search" placeholder="ابحث عن أداة..." autocomplete="off" aria-label="البحث عن أداة">
     </div>
     <div class="features">
-      <span>⚡ سريعة</span><span>🛡️ مجانية</span><span>📱 تعمل على الهاتف</span><span>🔒 بدون تسجيل</span>
+      <span>⚡ سريعة</span><span>🛡️ مجانية</span><span>📱 مناسبة للهاتف</span><span>🔒 بدون تسجيل</span>
     </div>
   </div>
-  <div class="hero-card">
+  <div class="hero-card" aria-hidden="true">
     <div class="screen">
       <div class="screen-brand"><span class="logo small">M</span> MODEGLI</div>
       <div class="screen-title">Smart tools.<br><b>Simple life.</b></div>
@@ -45,33 +61,67 @@
 </section>
 
 <section id="tools" class="tools-section">
-  <div class="section-head"><p class="eyebrow">TOOLS</p><h2>اختر الأداة التي تريدها</h2><p>مجموعة أدوات عملية لإنجاز مهامك بسهولة.</p></div>
+  <div class="section-head">
+    <p class="eyebrow">TOOLS</p>
+    <h2>اختر الأداة التي تريدها</h2>
+    <p>أدوات عملية للمهام اليومية، بدون خطوات معقدة.</p>
+  </div>
   <div id="grid" class="grid"></div>
   <p id="empty" class="empty" hidden>لم نجد أداة بهذا الاسم.</p>
 </section>
 
-<section id="tool-panel" class="panel" hidden>
-  <button id="close-tool" class="close">×</button>
-  <div id="tool-content"></div>
+<section class="content-section">
+  <div class="section-head">
+    <p class="eyebrow">HOW IT WORKS</p>
+    <h2>استخدم الأدوات في خطوات بسيطة</h2>
+  </div>
+  <div class="steps">
+    <article><strong>01</strong><h3>اختر الأداة</h3><p>افتح الأداة المناسبة من القائمة أو ابحث عنها بالاسم.</p></article>
+    <article><strong>02</strong><h3>أدخل بياناتك</h3><p>ارفع ملفًا أو اكتب النص أو الرقم المطلوب حسب الأداة.</p></article>
+    <article><strong>03</strong><h3>احصل على النتيجة</h3><p>نفّذ العملية ثم استخدم النتيجة أو حمّل الملف عند توفر ذلك.</p></article>
+  </div>
 </section>
 
 <section id="about" class="about">
   <p class="eyebrow">WHY MODEGLI?</p>
   <h2>أدوات بسيطة، تجربة واضحة.</h2>
   <div class="about-grid">
-    <div><b>مجاني</b><span>لا تحتاج إلى اشتراك لاستخدام الأدوات الأساسية.</span></div>
-    <div><b>سريع</b><span>العمليات الأساسية تتم داخل المتصفح.</span></div>
-    <div><b>خصوصية</b><span>لا نطلب إنشاء حساب لاستخدام الأدوات الأساسية.</span></div>
-    <div><b>متوافق</b><span>مصمم أولًا للهاتف ويعمل على الشاشات الكبيرة.</span></div>
+    <div><b>مجاني</b><span>الأدوات الأساسية متاحة بدون اشتراك.</span></div>
+    <div><b>سريع</b><span>العمليات الأساسية مصممة لتعمل بسرعة.</span></div>
+    <div><b>خصوصية</b><span>لا تحتاج الأدوات الأساسية إلى إنشاء حساب.</span></div>
+    <div><b>متوافق</b><span>تصميم متجاوب مع الهاتف والشاشات الكبيرة.</span></div>
   </div>
+</section>
+
+<section class="faq-section">
+  <div class="section-head"><p class="eyebrow">FAQ</p><h2>أسئلة شائعة</h2></div>
+  <details><summary>هل الأدوات مجانية؟</summary><p>نعم، الأدوات الحالية متاحة للاستخدام مجانًا.</p></details>
+  <details><summary>هل أحتاج إلى إنشاء حساب؟</summary><p>لا تحتاج الأدوات الأساسية إلى تسجيل دخول.</p></details>
+  <details><summary>هل يتم رفع الصور إلى خادم؟</summary><p>أداة ضغط الصور في هذه النسخة تنفذ المعالجة الأساسية داخل المتصفح.</p></details>
+</section>
+
+<section class="content-section">
+  <div class="section-head"><p class="eyebrow">ABOUT THE TOOLS</p><h2>ماذا يميز MODEGLI Tools؟</h2></div>
+  <p>نركز على أدوات صغيرة لها استخدام واضح: ضغط الصور، تغيير أبعادها، إنشاء رموز QR، عد الكلمات، تحويل الوحدات والحسابات اليومية. كل صفحة أداة تحتوي على شرح لطريقة الاستخدام وملاحظات تساعدك على فهم النتيجة، وليس مجرد نموذج إدخال.</p>
+  <p class="site-meta">آخر تحديث للموقع: 22 سبتمبر 2026 · نطوّر الأدوات تدريجيًا بناءً على احتياجات المستخدمين.</p>
 </section>
 </main>
 
 <footer>
   <div class="brand"><span class="logo">M</span><span><b>MODEGLI</b><small>Tools</small></span></div>
   <p>أدوات ذكية، لحياة أسهل.</p>
-  <div class="social"><a href="https://www.tiktok.com/@modegli" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/modegli7/" target="_blank" rel="noopener">Instagram</a></div>
+  <div class="footer-links">
+    <a href="./about.html">عن الموقع</a>
+    <a href="./privacy.html">الخصوصية</a>
+    <a href="./terms.html">الشروط</a>
+    <a href="./contact.html">تواصل معنا</a>
+  </div>
+  <div class="social">
+    <a href="https://www.tiktok.com/@modegli" target="_blank" rel="noopener noreferrer">TikTok</a>
+    <a href="https://www.instagram.com/modegli7/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
 </footer>
-<script src="app.js"></script>
+
+<script src="./app.js" defer></script>
 </body>
 </html>
