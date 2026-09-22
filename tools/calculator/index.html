@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#0a0d0d">
+
+  <title>الحاسبة المجانية أونلاين | MODEGLI Tools</title>
+
+  <meta
+    name="description"
+    content="حاسبة مجانية وسريعة لإجراء العمليات الحسابية الأساسية مباشرة من المتصفح، بدون تسجيل."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://modegli124.github.io/mo-tols/tools/calculator/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="الحاسبة المجانية أونلاين | MODEGLI Tools"
+  >
+
+  <meta
+    property="og:description"
+    content="حاسبة مجانية وسريعة تعمل مباشرة من المتصفح بدون تسجيل."
+  >
+
+  <meta
+    property="og:url"
+    content="https://modegli124.github.io/mo-tols/tools/calculator/"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <link rel="stylesheet" href="../../style.css">
+
+  <style>
+    .calculator-box {
+      max-width: 620px;
+      margin: 30px auto;
+      padding: 24px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+    }
+
+    .calculator-display {
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 70px;
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      background: #080b0b;
+      color: inherit;
+      font-size: 28px;
+      text-align: left;
+      direction: ltr;
+      outline: none;
+    }
+
+    .calculator-display:focus {
+      border-color: rgba(255,255,255,.3);
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .calc-btn {
+      min-height: 58px;
+      border: 0;
+      border-radius: 14px;
+      cursor: pointer;
+      font-size: 19px;
+      font-weight: 700;
+      background: rgba(255,255,255,.08);
+      color: inherit;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+
+    .calc-btn:hover {
+      opacity: .85;
+    }
+
+    .calc-btn:active {
+      transform: scale(.96);
+    }
+
+    .calc-btn.operator {
+      background: rgba(255,255,255,.14);
+    }
+
+    .calc-btn.equal {
+      grid-column: span 2;
+      background: rgba(255,255,255,.18);
+    }
+
+    .calc-btn.clear {
+      background: rgba(255,255,255,.12);
+    }
+
+    .tool-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .tool-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tool-intro h1 {
+      margin-bottom: 12px;
+    }
+
+    .tool-intro p {
+      line-height: 1.9;
+      opacity: .85;
+    }
+
+    .tool-info {
+      max-width: 760px;
+      margin: 40px auto;
+      line-height: 1.9;
+    }
+
+    .tool-info h2 {
+      margin-top: 32px;
+    }
+
+    .tool-info ul {
+      padding-right: 22px;
+    }
+
+    .tool-nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tool-nav a {
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.06);
+      color: inherit;
+      font-size: 14px;
+    }
+
+    .tool-nav a:hover {
+      background: rgba(255,255,255,.12);
+    }
+
+    .breadcrumbs {
+      max-width: 1000px;
+      margin: 20px auto 0;
+      padding: 0 20px;
+      font-size: 14px;
+      opacity: .7;
+    }
+
+    .breadcrumbs a {
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .calculator-box {
+        padding: 16px;
+        margin: 20px auto;
+      }
+
+      .calc-btn {
+        min-height: 54px;
+        font-size: 17px;
+      }
+
+      .calculator-display {
+        font-size: 24px;
+      }
+
+      .tool-content {
+        padding: 14px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "حاسبة MODEGLI",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "url": "https://modegli124.github.io/mo-tols/tools/calculator/",
+    "description": "حاسبة مجانية وسريعة لإجراء العمليات الحسابية الأساسية مباشرة من المتصفح.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "هل الحاسبة مجانية؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "نعم، يمكنك استخدام الحاسبة مجانًا من المتصفح بدون تسجيل."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "هل أحتاج إلى تثبيت برنامج؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "لا، تعمل الحاسبة مباشرة من متصفح الويب."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما العمليات التي تدعمها الحاسبة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تدعم العمليات الحسابية الأساسية مثل الجمع والطرح والضرب والقسمة والنسب المئوية والأقواس."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<a
+  href="#main"
+  class="skip-link"
+>
+  تخطي إلى المحتوى
+</a>
+
+<header class="header">
+
+  <a
+    class="brand"
+    href="../../index.html"
+    aria-label="MODEGLI Tools - الرئيسية"
+  >
+    <span class="logo">M</span>
+
+    <span>
+      <b>MODEGLI</b>
+      <small>Tools</small>
+    </span>
+  </a>
+
+  <nav aria-label="التنقل الرئيسي">
+    <a href="../../index.html">الرئيسية</a>
+    <a href="../../index.html#tools">الأدوات</a>
+    <a href="../../about.html">عن MODEGLI</a>
+    <a href="../../contact.html">تواصل معنا</a>
+  </nav>
+
+</header>
+
+
+<div class="tool-nav" aria-label="أدوات MODEGLI">
+
+  <a href="../image-compressor/">ضغط الصور</a>
+
+  <a href="../image-resizer/">تغيير حجم الصور</a>
+
+  <a href="../word-counter/">عداد الكلمات</a>
+
+  <a href="../unit-converter/">تحويل الوحدات</a>
+
+  <a href="../qr-generator/">مولد QR</a>
+
+  <a href="./" aria-current="page">الحاسبة</a>
+
+</div>
+
+
+<div class="breadcrumbs">
+
+  <a href="../../index.html">الرئيسية</a>
+
+  <span> › </span>
+
+  <a href="../../index.html#tools">الأدوات</a>
+
+  <span> › </span>
+
+  <span>الحاسبة</span>
+
+</div>
+
+
+<main id="main">
+
+  <div class="tool-content">
+
+    <section class="tool-intro">
+
+      <p class="eyebrow">MODEGLI CALCULATOR</p>
+
+      <h1>الحاسبة المجانية أونلاين</h1>
+
+      <p>
+        استخدم الحاسبة لإجراء العمليات الحسابية اليومية بسرعة
+        وسهولة مباشرة من المتصفح، بدون تسجيل أو تثبيت برنامج.
+      </p>
+
+    </section>
+
+
+    <section
+      class="calculator-box"
+      aria-label="الحاسبة"
+    >
+
+      <input
+        id="display"
+        class="calculator-display"
+        type="text"
+        inputmode="decimal"
+        autocomplete="off"
+        placeholder="0"
+        aria-label="شاشة الحاسبة"
+        readonly
+      >
+
+      <div class="calculator-grid">
+
+        <button
+          class="calc-btn clear"
+          type="button"
+          data-action="clear"
+          aria-label="مسح"
+        >
+          C
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="("
+        >
+          (
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value=")"
+        >
+          )
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="/"
+        >
+          ÷
+        </button>
+
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="7"
+        >
+          7
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="8"
+        >
+          8
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="9"
+        >
+          9
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="*"
+        >
+          ×
+        </button>
+
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="4"
+        >
+          4
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="5"
+        >
+          5
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="6"
+        >
+          6
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="-"
+        >
+          −
+        </button>
+
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="1"
+        >
+          1
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="2"
+        >
+          2
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="3"
+        >
+          3
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="+"
+        >
+          +
+        </button>
+
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="0"
+        >
+          0
+        </button>
+
+        <button
+          class="calc-btn"
+          type="button"
+          data-value="."
+        >
+          .
+        </button>
+
+        <button
+          class="calc-btn operator"
+          type="button"
+          data-value="%"
+        >
+          %
+        </button>
+
+        <button
+          class="calc-btn equal"
+          type="button"
+          data-action="calculate"
+        >
+          =
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="tool-info">
+
+      <h2>كيف تستخدم الحاسبة؟</h2>
+
+      <p>
+        اكتب العملية الحسابية باستخدام الأرقام والرموز الموجودة
+        في الحاسبة، ثم اضغط على علامة المساواة للحصول على النتيجة.
+      </p>
+
+      <h2>أمثلة على العمليات</h2>
+
+      <ul>
+        <li>25 + 15</li>
+        <li>100 - 35</li>
+        <li>12 × 5</li>
+        <li>100 ÷ 4</li>
+        <li>(25 + 5) × 2</li>
+      </ul>
+
+      <h2>هل الحاسبة تعمل على الهاتف؟</h2>
+
+      <p>
+        نعم. تم تصميم الصفحة لتعمل على الهواتف والأجهزة اللوحية
+        وأجهزة الكمبيوتر، ويمكن استخدامها مباشرة من متصفح الويب.
+      </p>
+
+      <h2>الخصوصية</h2>
+
+      <p>
+        العمليات الحسابية يتم تنفيذها داخل المتصفح، ولا تحتاج
+        إلى إنشاء حساب لاستخدام الحاسبة.
+      </p>
+
+      <h2>أسئلة شائعة</h2>
+
+      <h3>هل الحاسبة مجانية؟</h3>
+
+      <p>
+        نعم، الحاسبة متاحة مجانًا.
+      </p>
+
+      <h3>هل أحتاج إلى تنزيل تطبيق؟</h3>
+
+      <p>
+        لا، يمكنك استخدامها مباشرة من المتصفح.
+      </p>
+
+      <h3>هل يمكنني استخدامها على الهاتف؟</h3>
+
+      <p>
+        نعم، الصفحة متوافقة مع شاشات الهواتف والأجهزة اللوحية.
+      </p>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="brand">
+
+    <span class="logo">M</span>
+
+    <span>
+      <b>MODEGLI</b>
+      <small>Tools</small>
+    </span>
+
+  </div>
+
+  <p>
+    أدوات ذكية، لحياة أسهل.
+  </p>
+
+  <p>
+    <a href="mailto:modeglicontact@gmail.com">
+      modeglicontact@gmail.com
+    </a>
+  </p>
+
+</footer>
+
+
+<script>
+(function () {
+
+  const display = document.getElementById("display");
+
+  const buttons = document.querySelectorAll(".calc-btn");
+
+  let expression = "";
+
+
+  function updateDisplay() {
+
+    display.value = expression || "0";
+
+  }
+
+
+  function isSafeExpression(value) {
+
+    return /^[0-9+\-*/().%\s]+$/.test(value);
+
+  }
+
+
+  function calculate() {
+
+    if (!expression.trim()) {
+      return;
+    }
+
+    if (!isSafeExpression(expression)) {
+      display.value = "خطأ";
+      expression = "";
+      return;
+    }
+
+    try {
+
+      const result = Function(
+        '"use strict"; return (' + expression + ')'
+      )();
+
+      if (
+        typeof result !== "number" ||
+        !Number.isFinite(result)
+      ) {
+        throw new Error("Invalid result");
+      }
+
+      expression = String(
+        Number.isInteger(result)
+          ? result
+          : Number(result.toFixed(10))
+      );
+
+      updateDisplay();
+
+    } catch (error) {
+
+      display.value = "خطأ";
+      expression = "";
+
+    }
+
+  }
+
+
+  buttons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      const value = button.dataset.value;
+      const action = button.dataset.action;
+
+
+      if (action === "clear") {
+
+        expression = "";
+
+        updateDisplay();
+
+        return;
+
+      }
+
+
+      if (action === "calculate") {
+
+        calculate();
+
+        return;
+
+      }
+
+
+      if (value !== undefined) {
+
+        expression += value;
+
+        updateDisplay();
+
+      }
+
+    });
+
+  });
+
+
+  document.addEventListener("keydown", function (event) {
+
+    const allowed =
+      "0123456789+-*/().%";
+
+    if (allowed.includes(event.key)) {
+
+      expression += event.key;
+
+      updateDisplay();
+
+      event.preventDefault();
+
+    }
+
+
+    if (event.key === "Enter" || event.key === "=") {
+
+      calculate();
+
+      event.preventDefault();
+
+    }
+
+
+    if (event.key === "Escape") {
+
+      expression = "";
+
+      updateDisplay();
+
+    }
+
+
+    if (event.key === "Backspace") {
+
+      expression = expression.slice(0, -1);
+
+      updateDisplay();
+
+    }
+
+  });
+
+
+  updateDisplay();
+
+})();
+</script>
+
+</body>
+          </html>
