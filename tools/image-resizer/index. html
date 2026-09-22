@@ -9,4 +9,3 @@ f.onchange=()=>{const file=f.files[0];if(!file)return;const r=new FileReader();r
 w.oninput=()=>{if(lock.checked)h.value=Math.max(1,Math.round(w.value/ratio))};h.oninput=()=>{if(lock.checked)w.value=Math.max(1,Math.round(h.value*ratio))};
 go.onclick=()=>{const file=f.files[0];if(!file){msg.hidden=false;msg.textContent="اختر صورة أولًا.";return}const r=new FileReader();r.onload=e=>{const i=new Image();i.onload=()=>{const c=document.createElement("canvas");c.width=Number(w.value);c.height=Number(h.value);c.getContext("2d").drawImage(i,0,0,c.width,c.height);c.toBlob(b=>{const u=URL.createObjectURL(b),ext=type.value.split("/")[1].replace("jpeg","jpg");actions.innerHTML=`<a class="btn" href="${u}" download="modegli-resized.${ext}">تحميل الصورة</a>`;msg.hidden=false;msg.textContent=`تم تغيير الأبعاد إلى ${c.width} × ${c.height} بكسل.`},type.value,.9)};i.src=e.target.result};r.readAsDataURL(file)}
 </script></body></html>
-
